@@ -1,5 +1,13 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import { createStore } from '../store/index';
 
-export default function App() {
-  return <h1>Hello, world!</h1>
-}
+const store = createStore();
+
+const App: React.FC = () => (
+  <Provider store={store}>
+    <h1>Hello, world!</h1>
+  </Provider>
+);
+
+export default App;
