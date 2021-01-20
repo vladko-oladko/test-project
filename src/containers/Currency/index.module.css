@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 150px;
+  margin-top: 20px;
+}
+
+.loading {
+  position: absolute;
+}
+
+table {
+  width: 100%;
+  border: none;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table td {
+  border-left: 1px solid black;
+  padding-left: 10px;
+}
+
+table td:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+
+.pointer {
+  cursor: pointer;
+}

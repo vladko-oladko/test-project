@@ -11,37 +11,32 @@ import Analysis from './Analysis';
 import Currency from './Currency';
 import Home from './Home';
 import { createStore } from '../store/index';
+import styles from './App.module.css';
 
 const store = createStore();
 
 const App: React.FC = () => (
   <Provider store={store}>
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/analysis">Analysis</Link>
-            </li>
-            <li>
-              <Link to="/currency">Currency</Link>
-            </li>
-          </ul>
-        </nav>
-        <Switch>
-          <Route path="/analysis">
-            <Analysis />
-          </Route>
-          <Route path="/currency">
-            <Currency />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+      <nav className={styles.header}>
+        <Link to="/">Home</Link>
+        <Link to="/currency">Currency</Link>
+        <Link to="/analysis">Analysis</Link>
+      </nav>
+      <div className={styles.contentWrapper}>
+        <div className={styles.content}>
+          <Switch>
+            <Route path="/analysis">
+              <Analysis />
+            </Route>
+            <Route path="/currency">
+              <Currency />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </div>
       </div>
     </Router>
   </Provider>

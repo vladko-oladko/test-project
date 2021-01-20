@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
+    "outDir": "./public",
     "target": "es5",
     "module": "es6",
     "jsx": "react",
