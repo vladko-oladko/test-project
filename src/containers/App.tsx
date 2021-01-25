@@ -19,8 +19,7 @@ const App: React.FC = () => (
   <Provider store={store}>
     <Router>
       <nav className={styles.header}>
-        <Link to="/">Home</Link>
-        <Link to="/currency">Currency</Link>
+        <Link to="/">Currency</Link>
         <Link to="/analysis">Analysis</Link>
       </nav>
       <div className={styles.contentWrapper}>
@@ -29,11 +28,8 @@ const App: React.FC = () => (
             <Route path="/analysis">
               <Analysis />
             </Route>
-            <Route path="/currency">
-              <Currency />
-            </Route>
             <Route path="/">
-              <Home />
+              <Currency />
             </Route>
           </Switch>
         </div>
